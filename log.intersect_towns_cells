@@ -1,0 +1,50 @@
+Loading required package: rgdal
+Loading required package: sp
+Please note that rgdal will be retired by the end of 2023,
+plan transition to sf/stars/terra functions using GDAL and PROJ
+at your earliest convenience.
+
+rgdal: version: 1.5-32, (SVN revision 1176)
+Geospatial Data Abstraction Library extensions to R successfully loaded
+Loaded GDAL runtime: GDAL 3.0.4, released 2020/01/28
+Path to GDAL shared files: /usr/share/gdal
+GDAL binary built with GEOS: TRUE 
+Loaded PROJ runtime: Rel. 6.3.1, February 10th, 2020, [PJ_VERSION: 631]
+Path to PROJ shared files: /usr/share/proj
+Linking to sp version:1.5-0
+To mute warnings of possible GDAL/OSR exportToProj4() degradation,
+use options("rgdal_show_exportToProj4_warnings"="none") before loading sp or rgdal.
+Loading required package: raster
+OGR data source with driver: ESRI Shapefile 
+Source: "/accounts/vis/paciorek/research/jmac/composition-eastern-moretaxa/data", layer: "2073-42"
+with 2073 features
+It has 50 fields
+Integer64 fields read as strings:  JOIN_COUNT TARGET_FID 
+Warning messages:
+1: In spTransform(xSP, CRSobj, ...) :
+  NULL source CRS comment, falling back to PROJ string
+2: In wkt(obj) : CRS object has no comment
+Using overall Albers grid with grid spacing of 8000, x range of (-71000 2297000) and y range of (58000 1498000).
+Error in (function (x)  : attempt to apply non-function
+Error in (function (x)  : attempt to apply non-function
+Error in (function (x)  : attempt to apply non-function
+[1] 100
+[1] 200
+[1] 300
+[1] 400
+[1] 500
+[1] 600
+[1] 700
+[1] 800
+[1] 900
+[1] 1000
+[1] 1100
+[1] 1200
+[1] 1300
+[1] 1400
+[1] 1500
+[1] 1600
+[1] 1700
+[1] 1800
+[1] 1900
+[1] 2000

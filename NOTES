@@ -1,0 +1,54 @@
+2022-09-24:
+
+based on sigma2, mixing is still not great, but does seem to give stable values
+
+now using a final thin of 8 (in combine_runs.R) to get from 2000 to 500 samples, as o.w. would have 16 GB output file
+
+results sent to Charlie are /var/tmp/paleon/composition-eastern-moretaxa/output/PLScomposition_eastern_2073-42_0.2.nc derived from PLScomposition_eastern_0.2-{1..10}_full.nc
+
+
+
+2022-09-24:
+
+got new dataset from Charlie a couple weeks ago (2073-42)
+
+ran 10 runs on Savio (savio2) for 150k iterations; took about 11 days, plus a day or two to generate probabilities
+
+Savio fitting:
+
+Platform: x86_64-pc-linux-gnu (64-bit)
+Running under: Scientific Linux 7.9 (Nitrogen)
+
+Matrix products: default
+BLAS/LAPACK: /global/software/sl-7.x86_64/modules/langs/intel/2016.4.072/compilers_and_libraries_2016.4.258/linux/mkl/lib/intel64_lin/libmkl_gf_lp64.so
+
+locale:
+[1] C
+
+attached base packages:
+[1] parallel  stats     graphics  grDevices utils     datasets  methods  
+[8] base     
+
+other attached packages:
+[1] doParallel_1.0.16      iterators_1.0.13       foreach_1.5.1         
+[4] Rcpp_1.0.5             RhpcBLASctl_0.21-247.1 ncdf4_1.19            
+[7] spam_2.9-1             inline_0.3.19         
+
+loaded via a namespace (and not attached):
+[1] compiler_4.0.3   tools_4.0.3      dotCall64_1.0-1  codetools_0.2-16
+[5] grid_4.0.3      
+
+SCF prep:
+
+see packrat.lock-sep2022-scf
+
+
+2022-08-25: ran 4 runs for 150k iterations; took about a week on scf-sm2 nodes.
+I left out beech and sugar maple so need to rerun.
+
+mixing of sigma2 not very good for some taxa, in particular cedar, fir, hard_pitc, white birch, yellow birch. Doesn't seem directly correlated with sample size. Does seem associated with higher sigma2 values, so more smooth surfaces, perhaps not surprisingly.
+
+Looks like I should remove 100 out of 300 iterations (50k out of 150k before thinning) and probably do 10 runs.
+
+Runs take about 7 days on high partition with another 2 days for props sample generation.
+
